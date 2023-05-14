@@ -11,4 +11,4 @@ The local instance then converts the image to text using python tesseract, sends
 The watchtower actively listens to the latest reponse to the `api/watchtower` endpoint and places the text in html using Typescript.
  
 ## Video
-<a href="./../../../../gpt.mkv" title="Link Title" target="_blank"><img src="./../../../../wil.png" alt="Alternate Text" /></a>
+<a href="./../../../../gpt.mkv" title="Link Title" target="_blank" download="false"><img src="./../../../../wil.png" alt="Alternate Text" /></a>

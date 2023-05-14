@@ -1,6 +1,6 @@
 export const SITE = {
-	title: 'Documentation',
-	description: 'Your website description.',
+	title: 'Johannes Portfolio',
+	description: 'Johannes van der Merwe Portfolio.',
 	defaultLanguage: 'en-us',
 } as const;
 
@@ -36,11 +36,20 @@ export type Sidebar = Record<
 >;
 export const SIDEBAR: Sidebar = {
 	en: {
-		'Section Header': [
-			{ text: 'Introduction', link: 'en/introduction' },
-			{ text: 'Page 2', link: 'en/page-2' },
-			{ text: 'Page 3', link: 'en/page-3' },
+		'Careman': [
+			{ text: 'Introduction', link: 'en/intro' },
+			{ text: 'Tree', link: 'en/tree' },
+			{ text: 'DB', link: 'en/database' },
+			{ text: 'API', link: 'en/api' },
+			{ text: 'SMS', link: 'en/sms' },
+			{ text: 'Commands', link: 'en/commands' },
+			{ text: 'Frontend', link: 'en/careman-fontend' },
 		],
-		'Another Section': [{ text: 'Page 4', link: 'en/page-4' }],
+		'GPT Watchtower': [
+			{ text: 'Introduction', link: 'en/gpt-intro' },
+			{ text: 'Tree', link: 'en/tree-watchtower' },
+			{ text: 'Watchtower', link: 'en/watchtower' },
+			{ text: 'Express Beacon', link: 'en/express-beacon' },
+		]
 	},
 };

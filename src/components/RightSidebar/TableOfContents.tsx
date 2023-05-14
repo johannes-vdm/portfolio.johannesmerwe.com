@@ -66,28 +66,29 @@ const TableOfContents: FunctionalComponent<{ headings: MarkdownHeading[] }> = ({
 		setCurrentID(e.target.getAttribute('href').replace('#', ''));
 	};
 
-	return (
-		<>
-			<h2 id={onThisPageID} className="heading">
-				On this page
-			</h2>
-			<ul ref={toc}>
-				{headings
-					.filter(({ depth }) => depth > 1 && depth < 4)
-					.map((heading) => (
-						<li
-							className={`header-link depth-${heading.depth} ${
-								currentID === heading.slug ? 'current-header-link' : ''
-							}`.trim()}
-						>
-							<a href={`#${heading.slug}`} onClick={onLinkClick}>
-								{unescape(heading.text)}
-							</a>
-						</li>
-					))}
-			</ul>
-		</>
-	);
+	if (headings.length) {
+		return (
+			<>
+				<h2 id={onThisPageID} className="heading">
+					On this page
+				</h2>
+				<ul ref={toc}>
+					{headings
+						.filter(({ depth }) => depth > 1 && depth < 4)
+						.map((heading) => (
+							<li
+								className={`header-link depth-${heading.depth} ${currentID === heading.slug ? 'current-header-link' : ''
+									}`.trim()}
+							>
+								<a href={`#${heading.slug}`} onClick={onLinkClick}>
+									{unescape(heading.text)}
+								</a>
+							</li>
+						))}
+				</ul>
+			</>
+		);
+	}
 };
 
 export default TableOfContents;

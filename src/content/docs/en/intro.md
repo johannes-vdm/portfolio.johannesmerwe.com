@@ -24,18 +24,19 @@ ThinkTank
 ## Startup
 
 ### API
-1. ```git clone -b <branchname> https://github.com/johannes-vdm/Caressa```
+1. ```git clone -b <branchname> https://github.com/johannes-vdm/Caressa .```
 2. Clone most recent DB From https://careman.caressa.co.za Available through Gerrie Scheepers AWS RDS to Local Server
-3. ```cd caressa/backend```
+3. ```cd backend```
 4. Set up .env file
 5. ```composer install```/```composer upgrade```
 6. ```php artisan serve```
 7. Default endpoint `localhost:8000/api`
 ### ReactJS
 1. Navigate to root directory
-2. ```npm install```
-3. ```Enter your local API url provided by Backend in your .env file```
-4. ```npm run dev```
+2. ```cd frontend```
+3. ```npm install```
+4. ```Enter your local API url provided by Backend in your .env file```
+5. ```npm run dev```
 
 ## DB Backups
 | DBMS Version            | SYS Version | File                    | Branch       |

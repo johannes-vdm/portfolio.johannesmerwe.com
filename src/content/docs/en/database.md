@@ -6,7 +6,7 @@ title: 'Database'
 ## Relationship Graph
 
 ### Diagram File
-[MySQL EER Diagram File](../../../../public/db_mysql_relations_careman.mwb)
+[MySQL EER Diagram File](../../../../db_mysql_relations_careman.mwb)
 
 ### EER Diagram Image
 ![MarineGEO circle logo](../../../../db_relations.svg "MarineGEO logo")

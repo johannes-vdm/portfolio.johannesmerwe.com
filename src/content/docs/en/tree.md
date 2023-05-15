@@ -166,23 +166,6 @@ title: Directory Tree
  ┃ ┃ ┗ 📃dev_site_2022_06_02.sql
  ┃ ┣ 📜db_mysql_relations_careman.mwb
  ┃ ┗ 📜db_relations.svg
- ┣ 📂resources
- ┃ ┣ 📂css
- ┃ ┃ ┗ 🌟app.css
- ┃ ┣ 📂js
- ┃ ┃ ┣ 📂components
- ┃ ┃ ┃ ┗ 📜ExampleComponent.vue
- ┃ ┃ ┣ ⚛ app.jsx
- ┃ ┃ ┗ ⚛ bootstrap.jsx
- ┃ ┣ 📂lang
- ┃ ┃ ┗ 📂en
- ┃ ┃ ┃ ┣ 🐘 auth.php
- ┃ ┃ ┃ ┣ 🐘 pagination.php
- ┃ ┃ ┃ ┣ 🐘 passwords.php
- ┃ ┃ ┃ ┗ 🐘 validation.php
- ┃ ┣ 📂sass
- ┃ ┃ ┣ 📜app.scss
- ┃ ┃ ┗ 📜_variables.scss
  ┣ 📂routes
  ┃ ┣ 🐘 api.php
  ┃ ┣ 🐘 auth.php

@@ -1,16 +1,8 @@
-# Astro Starter Kit: Docs Site
+# Astro Portfolio 
 
 ```bash
 npm create astro@latest -- --template docs
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/docs)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/docs)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/docs/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![docs](https://user-images.githubusercontent.com/4677417/186189283-0831b9ab-d6b9-485d-8955-3057e532ab31.png)
 
 ## Features
 
@@ -23,7 +15,7 @@ npm create astro@latest -- --template docs
 - ✅ **Automatic list of contributors**
 - ✅ (and, best of all) **dark mode**
 
-## 🧞 Commands
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 

@@ -192,7 +192,6 @@ title: Directory Tree
  ┣ 📜.env.example
  ┣ 📜.gitattributes
  ┣ 📜.gitignore
- ┣ 📜.htaccess.save
  ┣ 📜.styleci.yml
  ┣ 📜artisan
  ┣ 📜composer.json
@@ -208,7 +207,7 @@ title: Directory Tree
  ┣ 📜tailwind.config.js
  ┗ 📜webpack.mix.js
  ```
-## Frontend
+## Front-End
  ```
 📦frontend
  ┣📂public
@@ -258,15 +257,9 @@ title: Directory Tree
  ┃ ┃ ┣ 📜caressa.png
  ┃ ┃ ┣ 📜caressalogo.png
  ┃ ┃ ┗ 📜profile-avatar.png
- ┃ ┣ 📜.DS_Store
- ┃ ┣ 📜.htaccess
- ┃ ┣ 📜favicon.ico
- ┃ ┣ 🐘 index.php
- ┃ ┣ 📜robots.txt
- ┃ ┗ 📜web.config
+
  📦src
  ┣ 📂auth
- ┃ ┣ 📂passwords
  ┃ ┃ ┣ ⚛ Confirm.jsx
  ┃ ┃ ┣ ⚛ Email.jsx
  ┃ ┃ ┗ ⚛ Reset.jsx

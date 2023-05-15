@@ -1,5 +1,5 @@
 ---
-title: "GPT INTRO"
+title: "Watchtower Introduction"
 ---
 
 

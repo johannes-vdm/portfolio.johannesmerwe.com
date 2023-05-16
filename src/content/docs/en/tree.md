@@ -192,19 +192,15 @@ title: Directory Tree
  ┣ 📜.env.example
  ┣ 📜.gitattributes
  ┣ 📜.gitignore
- ┣ 📜.styleci.yml
  ┣ 📜artisan
  ┣ 📜composer.json
  ┣ 📜composer.lock
- ┣ 📜package-lock.json
- ┣ 📜package.json
  ┣ 📜phpunit.xml
  ┣ 📜README.html
  ┣ 📜README.md
  ┣ 📜routes.md
  ┣ 📜SECURITY.md
  ┣ 🐘 server.php
- ┣ 📜tailwind.config.js
  ┗ 📜webpack.mix.js
  ```
 ## Front-End

@@ -88,14 +88,13 @@ ThinkTank
 - 5 - Admin Manager
 - 6 - Case Manager
 
-# Messages
-MIGHTY CHANGES
+## Messages
+Mighty Contributed to:
 - sms class directory app/lib/SMSApi.php
+- form search functionalities
 
-## to get default sms in the database run the following command
-```$php artisan db:seed```
 
-# Dependencies
+## Dependencies
 ```
 9.5.14 The PHP Unit Testing framework.
 ├──doctrine/instantiator ^1.3.1

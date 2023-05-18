@@ -16,7 +16,7 @@ title: "Directory Tree"
  ┣ 📜Readme.md
  ┗ 📜requirements.txt
 
- 📦beacon
+📦beacon
  ┣ 📂public
  ┃ ┣ 📜beacon.png
  ┃ ┗ 📜index.html
@@ -26,4 +26,4 @@ title: "Directory Tree"
  ┣ 📜Readme.md
  ┣ 📜server.ts
  ┗ 📜tsconfig.json
- ```
+```

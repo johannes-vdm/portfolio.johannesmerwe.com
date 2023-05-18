@@ -36,6 +36,9 @@ export type Sidebar = Record<
 >;
 export const SIDEBAR: Sidebar = {
 	en: {
+		// 'CV': [
+		// 	{ text: 'Introduction', link: 'en/cv' },
+		// ],
 		'Careman': [
 			{ text: 'Introduction', link: 'en/intro' },
 			{ text: 'Tree', link: 'en/tree' },
@@ -43,7 +46,7 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'API', link: 'en/api' },
 			{ text: 'SMS', link: 'en/sms' },
 			{ text: 'Commands', link: 'en/commands' },
-			{ text: 'Frontend', link: 'en/careman-fontend' },
+			{ text: 'Front-End', link: 'en/careman-fontend' },
 		],
 		'GPT Watchtower': [
 			{ text: 'Introduction', link: 'en/gpt-intro' },

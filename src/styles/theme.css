@@ -96,7 +96,7 @@ body {
 	--theme-text-lighter: hsla(var(--color-gray-40), 1);
 	--theme-bg: #2B2B2B;
 	/* --theme-bg: hsla(215, 28%, 17%, 1); */
-	--theme-bg-hover: hsla(var(--color-gray-40), 1);
+	--theme-bg-hover: rgb(240 242 244 / 10%);
 	--theme-bg-offset: hsla(var(--color-gray-5), 1);
 	--theme-code-inline-bg: hsla(var(--color-gray-10), 1);
 	--theme-code-inline-text: hsla(var(--color-base-white), 100%, 1);

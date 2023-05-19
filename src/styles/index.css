@@ -234,8 +234,13 @@ table {
 	border-collapse: collapse;
 }
 
+
+thead {
+	background: var(--theme-bg-hover);
+}
+
 /* Zebra striping */
-tr:nth-of-type(odd) {
+tr:nth-of-type(even) {
 	background: var(--theme-bg-hover);
 }
 

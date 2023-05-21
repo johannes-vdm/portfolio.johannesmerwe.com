@@ -37,13 +37,13 @@ export const SIDEBAR: Sidebar = {
 		// 	{ text: 'Introduction', link: 'en/cv' },
 		// ],
 		'Careman': [
+			{ text: 'Front-End', link: 'en/careman-fontend' },
 			{ text: 'Introduction', link: 'en/intro' },
 			{ text: 'Tree', link: 'en/tree' },
 			{ text: 'DB', link: 'en/database' },
 			{ text: 'API', link: 'en/api' },
 			{ text: 'SMS', link: 'en/sms' },
 			{ text: 'Commands', link: 'en/commands' },
-			{ text: 'Front-End', link: 'en/careman-fontend' },
 		],
 		'GPT Watchtower': [
 			{ text: 'Introduction', link: 'en/gpt-intro' },

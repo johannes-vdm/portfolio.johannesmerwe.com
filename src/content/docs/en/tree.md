@@ -200,8 +200,7 @@ title: Directory Tree
  ┣ 📜README.md
  ┣ 📜routes.md
  ┣ 📜SECURITY.md
- ┣ 🐘 server.php
- ┗ 📜webpack.mix.js
+ ┗ 🐘 server.php
  ```
 ## Front-End
  ```

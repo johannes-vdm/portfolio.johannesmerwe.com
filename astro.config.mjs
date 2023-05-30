@@ -11,5 +11,5 @@ export default defineConfig({
 		preact(),
 		// Enable React for the Algolia search component.
 		react(), sitemap()],
-	site: `https://astro.build`
+	site: `https://portfolio.johannesmerwe.com`
 });

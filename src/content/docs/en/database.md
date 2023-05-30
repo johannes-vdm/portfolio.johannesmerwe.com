@@ -15,8 +15,11 @@ title: 'Database'
 
 ## Seed   
 This could have been improved as the entire database should have been `seed-ready`
+
 ```shell
+
 php artisan db:seed
+
 ```
 
 ```php

@@ -1,6 +1,6 @@
 export const SITE = {
 	title: 'Johannes Portfolio',
-	description: 'Johannes van der Merwe Portfolio.',
+	description: 'Johannes van der Merwe - Full Stack Engineer Projects.',
 	defaultLanguage: 'en-us',
 } as const;
 
@@ -33,8 +33,8 @@ export type Sidebar = Record<
 >;
 export const SIDEBAR: Sidebar = {
 	en: {
-		// 'CV': [
-		// 	{ text: 'Introduction', link: 'en/cv' },
+		// 'Home': [
+		// 	{ text: 'Home', link: 'en/home' },
 		// ],
 		'Careman': [
 			{ text: 'Front-End', link: 'en/careman-fontend' },

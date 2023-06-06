@@ -9,7 +9,7 @@ title: 'Database'
 [MySQL EER Diagram File](../../../../db_mysql_relations_careman.mwb)
 
 ### EER Diagram Image
-![MarineGEO circle logo](../../../../db_relations.svg "MarineGEO logo")
+<a href="../../../../db_relations.svg" target="_blank">![MarineGEO circle logo](../../../../db_relations.svg "MarineGEO logo")</a>
 
 <a href="../../../../db_relations.svg" target="_blank">View Image</a>
 

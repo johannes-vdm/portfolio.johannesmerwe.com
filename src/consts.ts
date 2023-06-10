@@ -1,18 +1,18 @@
 export const SITE = {
-	title: 'Johannes Portfolio',
-	description: 'Johannes van der Merwe - Full Stack Engineer Projects.',
+	title: 'Johannes van der Merwe',
+	description: 'Johannes van der Merwe',
 	defaultLanguage: 'en-us',
 } as const;
 
-export const OPEN_GRAPH = {
-	image: {
-		src: 'https://github.com/withastro/astro/blob/main/.github/assets/banner.png?raw=true',
-		alt:
-			'astro logo on a starry expanse of space,' +
-			' with a purple saturn-like planet floating in the right foreground',
-	},
-	twitter: 'astrodotbuild',
-};
+// export const OPEN_GRAPH = {
+// 	// image: {
+// 		// src: 'https://github.com/withastro/astro/blob/main/.github/assets/banner.png?raw=true',
+// 	// 	alt:
+// 	// 		'astro logo on a starry expanse of space,' +
+// 	// 		' with a purple saturn-like planet floating in the right foreground',
+// 	// },
+// 	// twitter: 'astrodotbuild',
+// };
 
 export const KNOWN_LANGUAGES = {
 	English: 'en',

@@ -126,5 +126,5 @@ body {
 }
 
 .mf-widget-powered {
-	display: none;
+	display: none !important;
 }

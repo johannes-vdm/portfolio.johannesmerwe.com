@@ -1,5 +1,8 @@
 # Astro Portfolio 
 
+## TODO
+- Duplicate meta tags
+
 ```bash
 npm create astro@latest -- --template docs
 ```

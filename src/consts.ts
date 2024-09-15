@@ -3,8 +3,14 @@ export const SITE = {
 	description: 'Johannes van der Merwe',
 } as const;
 
-export type Sidebar = Record<string, { text: string; link: string }[]>;
+export type Sidebar = Record<string, { text: string; link?: string }[]>;
 export const SIDEBAR: Sidebar = {
+	'Home': [ 
+		{ text: 'Home', link: '' },
+	],
+	'Projects': [ 
+		{ text: 'Projects', link: '' },
+	],
 	'Careman': [
 		{ text: 'Introduction', link: 'careman' },
 		{ text: 'Interface', link: 'careman/careman-fontend' },

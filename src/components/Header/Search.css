@@ -65,11 +65,3 @@
 	}
 }
 
-/* ------------------------------------------------------------ *\
-	DocSearch (Algolia)
-\* ------------------------------------------------------------ */
-
-.DocSearch-Modal .DocSearch-Hit a {
-	box-shadow: none;
-	border: 1px solid var(--theme-accent);
-}

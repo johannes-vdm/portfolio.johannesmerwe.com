@@ -6,12 +6,12 @@ title: 'Database'
 ## Relationship Graph
 
 ### Diagram File
-[MySQL EER Diagram File](../../../../db_mysql_relations_careman.mwb)
+[MySQL EER Diagram File](../../../../public/db_mysql_relations_careman.mwb)
 
 ### EER Diagram Image
-<a href="../../../../db_relations.svg" target="_blank">![MarineGEO circle logo](../../../../db_relations.svg "MarineGEO logo")</a>
+<a href="../../../public/db_relations.svg" target="_blank">![MarineGEO circle logo](../../../public/db_relations.svg "MarineGEO logo")</a>
 
-<a href="../../../../db_relations.svg" target="_blank">View Image</a>
+<a href="../../../public/db_relations.svg" target="_blank">View Image</a>
 
 ## Seed   
 This could have been improved as the entire database should have been `seed-ready`

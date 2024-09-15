@@ -1,6 +1,6 @@
 ---
 title: "Careman Management System"
-description: "Lorem ipsum dolor sit amet - 4"
+description: "Complete CRUD using React and Laravel"
 ---
 
 For any additional details, feel free to contact:

@@ -1,5 +1,106 @@
-<script is:inline>
-	// Redirect your homepage to the first page of documentation.
-	// If you have a landing page, remove this script and add it here!
-	window.location.pathname = `/careman`;
-</script>
+---
+import dash from './public/projects/dash.png'
+import gptScreenshot from './public/projects/gpt-screenshot.png'
+import reactHookForm from './public/projects/react-hook-form.png'
+import chatbot from './public/projects/chatbot.png'
+import coffeeCo from './public/projects/coffee-co.png'
+import friends from './public/projects/friends.png'
+const projects = [
+  { image: dash, title: "Careman CRUD", description: "Complete CRUD using JSX | Laravel", link: "/careman", demo: "https://careman.caressa.co.za" },
+  { image: gptScreenshot, title: "Screenshot GPT", description: "Screenshots to OpenAI, enough said.", link: "/gpt-screenshot", github: "https://github.com/johannes-vdm/watchtower" },
+  { image: reactHookForm, title: "React form box", description: "React Hook form playground", demo: "https://reacthookbox.portfolio.johannesmerwe.com/", github: "https://github.com/johannes-vdm/react-box" },
+  { image: chatbot, title: "Chatbot", description: "Leadinfo chat bot demo", demo: "https://chatbot.portfolio.johannesmerwe.com", github: "https://github.com/johannes-vdm/chatbot.portfolio.johannesmerwe.com" },
+  { image: coffeeCo, title: "Coffee Company", description: "Speadrun Coffee & Co. E-commerce", demo: "https://coffee.portfolio.johannesmerwe.com", github: "https://github.com/johannes-vdm/coffee.portfolio.johannesmerwe.com" },
+  { image: friends, title: "Stack friends list", description: "Overflow Friends list", demo: "https://stack.portfolio.johannesmerwe.com/", github: "https://github.com/johannes-vdm/stack.portfolio.johannesmerwe.com" },
+];
+---
+
+<html lang="en">
+<head>
+    <meta property="og:title" content="Johannes van der Merwe - Software Developer">
+    <meta property="og:image" content="./public/projects/johannes.jpg">
+    <meta property="og:url" content="https://portfolio.johannesmerwe.com">
+    <meta property="og:type" content="website">
+    <meta charset="utf-8" />
+    <meta name="description" content="Johannes van der Merwe is a tech lover based in Amsterdam. Explore his projects.">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content="Astro" />
+    <title>Johannes van der Merwe - Software</title>
+</head>
+<body class="min-h-screen bg-gray-950">
+    <div class="min-h-screen text-white flex flex-col">
+        <main class="flex-grow flex items-center justify-center relative overflow-hidden">
+            <div class="text-center z-10">
+                <h1 class="text-5xl font-bold mb-4 opacity-0 translate-y-[-50px] animate-fadeInDown">
+                    Johannes van der Merwe
+                </h1>
+                <p class="text-xl mb-8 opacity-0 translate-y-[50px] animate-fadeInUp">
+                    Software developer | Tech lover
+                </p>
+                <div class="opacity-0 animate-fadeIn space-x-2">
+                    <a 
+                        class="text-cyan-600 cursor-pointer underline"
+                        href="#projects"
+                        >
+                        View Projects
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="min-h-screen container mx-auto px-4 py-8 flex flex-col justify-between">
+        <h1 id="projects" class="text-4xl font-bold text-white mb-8 text-center">My Projects</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 bg-dark-container">
+            {projects.map((project) => (
+                <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 flex">
+                    <div class="w-28 h-28 overflow-hidden rounded-lg mr-6">
+                        <img src={project.image.src} alt=`${project.title} png` class="w-full h-full object-cover" />
+                    </div>
+                    <div class="flex flex-col justify-between w-2/3">
+                        <div>
+                            <h2 class="text-2xl font-semibold text-white mb-2">{project.title}</h2>
+                            <p class="text-gray-200 mb-4">{project.description}</p>
+                        </div>
+                        <div class="space-x-2 items-end mt-auto">
+                            {project.link && <a href={project.link} class="text-teal-300 hover:text-teal-100 transition-colors duration-300">View documentation</a>}
+                           {project.demo && <a target="_blank" href={project.demo} class="text-orange-300 hover:text-orange-100 transition-colors duration-300">View demo</a>}
+                           {project.github && <a target="_blank" href={project.github} class="text-red-300 hover:text-red-100 transition-colors duration-300">View source</a>}
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+        <footer class="mt-12 text-center text-white">
+            <p>Have a quick braai?</p>
+        </footer>
+    </div>
+</body>
+
+<style>
+    @keyframes fadeInDown {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(50px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    .animate-fadeInDown { animation: fadeInDown 0.5s forwards; }
+    .animate-fadeInUp { animation: fadeInUp 0.5s 0.2s forwards; }
+    .animate-fadeIn { animation: fadeIn 0.5s 0.4s forwards; }
+
+    .bg-dark-container {
+        padding: 2rem;
+        border-radius: 1rem;
+    }
+</style>

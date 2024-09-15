@@ -94,7 +94,7 @@ body {
 
 	/* @@@: not used anywhere */
 	--theme-text-lighter: hsla(var(--color-gray-40), 1);
-	--theme-bg: #2B2B2B;
+	--theme-bg: #111111;
 	/* --theme-bg: hsla(215, 28%, 17%, 1); */
 	--theme-bg-hover: rgb(240 242 244 / 10%);
 	--theme-bg-offset: hsla(var(--color-gray-5), 1);
@@ -103,7 +103,7 @@ body {
 	--theme-code-bg: white;
 	/* --theme-code-bg: hsla(var(--color-gray-5), 1); */
 	--theme-code-text: hsla(var(--color-base-white), 100%, 1);
-	--theme-navbar-bg: #2B2B2B;
+	--theme-navbar-bg: hsla(var(--theme-bg));
 	/* --theme-navbar-bg: hsla(215, 28%, 17%, 1); */
 	--theme-selection-color: hsla(var(--color-base-white), 100%, 1);
 	--theme-selection-bg: hsla(var(--color-purple), var(--theme-accent-opacity));

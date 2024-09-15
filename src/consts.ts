@@ -8,9 +8,6 @@ export const SIDEBAR: Sidebar = {
 	'Home': [ 
 		{ text: 'Home', link: '' },
 	],
-	'Projects': [ 
-		{ text: 'Projects', link: '' },
-	],
 	'Careman': [
 		{ text: 'Introduction', link: 'careman' },
 		{ text: 'Interface', link: 'careman/careman-fontend' },

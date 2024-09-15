@@ -1,10 +1,11 @@
 ---
-import dash from './public/projects/dash.png'
-import gptScreenshot from './public/projects/gpt-screenshot.png'
-import reactHookForm from './public/projects/react-hook-form.png'
-import chatbot from './public/projects/chatbot.png'
-import coffeeCo from './public/projects/coffee-co.png'
-import friends from './public/projects/friends.png'
+import { Image } from "astro:assets";
+import dash from '../../public/projects/dash.png'
+import gptScreenshot from '../../public/projects/gpt-screenshot.png'
+import reactHookForm from '../../public/projects/react-hook-form.png'
+import chatbot from '../../public/projects/chatbot.png'
+import coffeeCo from '../../public/projects/coffee-co.png'
+import friends from '../../public/projects/friends.png'
 const projects = [
   { image: dash, title: "Careman CRUD", description: "Complete CRUD using JSX | Laravel", link: "/careman", demo: "https://careman.caressa.co.za" },
   { image: gptScreenshot, title: "Screenshot GPT", description: "Screenshots to OpenAI, enough said.", link: "/gpt-screenshot", github: "https://github.com/johannes-vdm/watchtower" },
@@ -57,7 +58,7 @@ const projects = [
             {projects.map((project) => (
                 <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 flex">
                     <div class="w-28 h-28 overflow-hidden rounded-lg mr-6">
-                        <img src={project.image.src} alt=`${project.title} png` class="w-full h-full object-cover" />
+                        <Image src={project.image} alt=`${project.title} png` class="w-full h-full object-cover" />
                     </div>
                     <div class="flex flex-col justify-between w-2/3">
                         <div>

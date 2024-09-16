@@ -40,7 +40,8 @@ const sidebar = SIDEBAR;
 							class="underline"
 							href="https://www.linkedin.com/in/johannes-van-der-merwe/"
 							target="_blank"
-							><svg
+						>
+							<svg
 								style="margin-right: 1%;"
 								fill="currentColor"
 								xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +71,9 @@ const sidebar = SIDEBAR;
 										<a
 											href={url}
 											aria-current={
-												currentPageMatch === child.link ? "page" : false
+												currentPageMatch === child.link
+													? "page"
+													: false
 											}
 										>
 											{child.text}

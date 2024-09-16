@@ -16,7 +16,7 @@ title: "Careman Front-End"
 *Please note: Many pieces of information are blurred out for privacy reasons*
 
 ## Login & Register
-<img src="./../../../../public/reglog.png" />
+<img src="./../../../public/reglog.png" />
 
 ### Code
 

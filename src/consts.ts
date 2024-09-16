@@ -7,6 +7,7 @@ export type Sidebar = Record<string, { text: string; link?: string }[]>;
 export const SIDEBAR: Sidebar = {
 	'': [ 
 		{ text: 'Home', link: '' },
+		{ text: 'Projects', link: '#projects' },
 	],
 	'Careman': [
 		{ text: 'Introduction', link: 'careman' },

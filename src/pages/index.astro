@@ -14,6 +14,9 @@ const projects = [
   { image: coffeeCo, title: "Coffee Company", description: "Speadrun Coffee & Co. E-commerce", demo: "https://coffee.portfolio.johannesmerwe.com", github: "https://github.com/johannes-vdm/coffee.portfolio.johannesmerwe.com" },
   { image: friends, title: "Stack friends list", description: "Overflow Friends list", demo: "https://stack.portfolio.johannesmerwe.com/", github: "https://github.com/johannes-vdm/stack.portfolio.johannesmerwe.com" },
 ];
+
+const githubUrl = "https://github.com/johannes-van-der-merwe";
+const linkedinUrl = "https://www.linkedin.com/in/johannes-vdm";
 ---
 
 <html lang="en">
@@ -29,20 +32,31 @@ const projects = [
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content="Astro" />
     <title>Johannes van der Merwe - Software</title>
+    <!-- Add Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="min-h-screen bg-gray-950">
-    <div class="min-h-screen text-white flex flex-col">
+<body class="min-h-screen bg-blue-950">
+    <canvas id="backgroundCanvas" class="fixed top-0 left-0 w-full h-full z-0"></canvas>
+    <div id="glassOverlay" class="fixed top-0 left-0 w-full h-full z-5"></div>
+    <div id="darkOverlay" class="fixed top-0 left-0 w-full h-full z-6"></div>
+    <div class="min-h-screen text-white flex flex-col relative z-10">
         <main class="flex-grow flex items-center justify-center relative overflow-hidden">
             <div class="text-center z-10">
                 <h1 class="text-5xl font-bold mb-4 opacity-0 translate-y-[-50px] animate-fadeInDown">
                     Johannes van der Merwe
                 </h1>
                 <p class="text-xl mb-8 opacity-0 translate-y-[50px] animate-fadeInUp">
-                    Software developer | Tech lover
+                    Full stack developer &nbsp;|
+                    <a href={githubUrl} target="_blank" rel="noopener noreferrer" class="icon-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" class="icon-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
                 </p>
                 <div class="opacity-0 animate-fadeIn space-x-2">
                     <a 
-                        class="text-cyan-600 cursor-pointer underline"
+                        class="btn-link"
                         href="#projects"
                         >
                         View Projects
@@ -52,7 +66,7 @@ const projects = [
         </main>
     </div>
 
-    <div class="min-h-screen container mx-auto px-4 py-8 flex flex-col justify-between">
+    <div class="min-h-screen container mx-auto px-4 py-8 flex flex-col">
         <h1 id="projects" class="text-4xl font-bold text-white mb-8 text-center">My Projects</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 bg-dark-container">
             {projects.map((project) => (
@@ -66,18 +80,116 @@ const projects = [
                             <p class="text-gray-200 mb-4">{project.description}</p>
                         </div>
                         <div class="space-x-2 items-end mt-auto">
-                            {project.link && <a href={project.link} class="text-teal-300 hover:text-teal-100 transition-colors duration-300">View documentation</a>}
-                           {project.demo && <a target="_blank" href={project.demo} class="text-orange-300 hover:text-orange-100 transition-colors duration-300">View demo</a>}
-                           {project.github && <a target="_blank" href={project.github} class="text-red-300 hover:text-red-100 transition-colors duration-300">View source</a>}
+                            {project.link && <a href={project.link} class="text-teal-300 hover:text-teal-100 transition-colors duration-300">Documentation</a>}
+                           {project.demo && <a target="_blank" href={project.demo} class="text-orange-300 hover:text-orange-100 transition-colors duration-300">Demo</a>}
+                           {project.github && <a target="_blank" href={project.github} class="text-red-300 hover:text-red-100 transition-colors duration-300">Source</a>}
                         </div>
                     </div>
                 </div>
             ))}
         </div>
         <footer class="mt-12 text-center text-white">
-            <p>Have a quick braai?</p>
+            <p>Have a braai? <a href="mailto:johannes@webit.co.za">johannes@webit.co.za</a></p>
         </footer>
     </div>
+
+    <script>
+        // Adjustable variables
+        const particleCount = 7;
+        // const particleColors = ['#4cc9f0', '#4361ee', '#3a0ca3', '#7209b7', '#f72585'];
+        const particleColors = [ '#0077FFFF','#4361ee','#0CA376FF', 'orange','#64F725FF'];
+        const particleMaxSize = window.innerWidth / 2;
+        const particleMinSize = window.innerWidth / 4;
+        const particleSpeed = 1.2;
+        const particlePulsateSpeed = 0.3;
+        const particlePulsateAmount = 0.08;
+        const canvasOpacity = 1;
+        const glassBlur = 80;
+        const glassOpacity = 0.2;
+        const glassTintColor = [0, 0, 0]; // RGB values for glass tint
+        const darkOverlayOpacity = 0; // Opacity for the dark overlay
+        const darkOverlayColor = [0, 0, 0]; // RGB values for dark overlay color
+
+        const canvas = document.getElementById('backgroundCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.radius = particleMinSize + Math.random() * (particleMaxSize - particleMinSize);
+                this.color = particleColors[Math.floor(Math.random() * particleColors.length)];
+                this.direction = Math.random() * Math.PI * 2;
+                this.speed = particleSpeed;
+                this.turnSpeed = Math.random() - 0.5;
+                this.scale = 1;
+                this.lastUpdate = Date.now();
+            }
+
+            update() {
+                const now = Date.now();
+                const delta = (now - this.lastUpdate) / 1000; // Convert to seconds
+                this.lastUpdate = now;
+
+                this.direction += this.turnSpeed * 0.01 * delta;
+                this.x += Math.sin(this.direction) * this.speed * delta * 60; // Normalize to 60 FPS
+                this.y += Math.cos(this.direction) * this.speed * delta * 60;
+
+                if (this.x < -this.radius) this.x = canvas.width + this.radius;
+                if (this.x > canvas.width + this.radius) this.x = -this.radius;
+                if (this.y < -this.radius) this.y = canvas.height + this.radius;
+                if (this.y > canvas.height + this.radius) this.y = -this.radius;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius * this.scale, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+        }
+
+        const particles = Array.from({ length: particleCount }, () => new Particle());
+
+        let count = 0;
+        let lastTime = 0;
+        function animate(currentTime: number) {
+            if (!lastTime) lastTime = currentTime;
+            const delta = (currentTime - lastTime) / 1000; // Convert to seconds
+            lastTime = currentTime;
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            count += particlePulsateSpeed * delta;
+
+            particles.forEach(particle => {
+                particle.update();
+                particle.scale = 1 + Math.sin(count) * particlePulsateAmount;
+                particle.draw();
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        animate(0);
+
+        // Apply styles
+        canvas.style.opacity = canvasOpacity;
+
+        const glassOverlay = document.getElementById('glassOverlay');
+        glassOverlay.style.backdropFilter = `blur(${glassBlur}px)`;
+        glassOverlay.style.webkitBackdropFilter = `blur(${glassBlur}px)`;
+        glassOverlay.style.backgroundColor = `rgba(${glassTintColor.join(',')}, ${glassOpacity})`;
+
+        const darkOverlay = document.getElementById('darkOverlay');
+        darkOverlay.style.backgroundColor = `rgba(${darkOverlayColor.join(',')}, ${darkOverlayOpacity})`;
+    </script>
 </body>
 
 <style>
@@ -103,5 +215,44 @@ const projects = [
     .bg-dark-container {
         padding: 2rem;
         border-radius: 1rem;
+    }
+
+    #backgroundCanvas {
+        opacity: 0.7;
+    }
+
+    #glassOverlay, #darkOverlay {
+        pointer-events: none;
+    }
+
+    #glassOverlay {
+        /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)); */
+    }
+
+    .btn-link {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        border: 2px solid #4cc9f0;
+        border-radius: 0.5rem;
+        color: #4cc9f0;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .btn-link:hover {
+        background-color: #4cc9f0;
+        color: #ffffff;
+    }
+
+    .icon-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0.5rem;
+        color: #4cc9f0;
+    }
+
+    .icon-link:hover {
+        color: #ffffff;
     }
 </style>

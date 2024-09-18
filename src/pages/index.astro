@@ -32,7 +32,6 @@ const linkedinUrl = "https://www.linkedin.com/in/johannes-vdm";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content="Astro" />
     <title>Johannes van der Merwe - Software</title>
-    <!-- Add Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="min-h-screen bg-blue-950">
@@ -94,21 +93,20 @@ const linkedinUrl = "https://www.linkedin.com/in/johannes-vdm";
     </div>
 
     <script>
-        // Adjustable variables
-        const particleCount = 7;
+        const particleCount = 10;
         // const particleColors = ['#4cc9f0', '#4361ee', '#3a0ca3', '#7209b7', '#f72585'];
         const particleColors = [ '#0077FFFF','#4361ee','#0CA376FF', 'orange','#64F725FF'];
-        const particleMaxSize = window.innerWidth / 2;
-        const particleMinSize = window.innerWidth / 4;
+        const particleMaxSize = window.innerWidth / 4;
+        const particleMinSize = window.innerWidth / 9;
         const particleSpeed = 1.2;
         const particlePulsateSpeed = 0.3;
         const particlePulsateAmount = 0.08;
         const canvasOpacity = 1;
-        const glassBlur = 80;
+        const glassBlur =100;
         const glassOpacity = 0.2;
-        const glassTintColor = [0, 0, 0]; // RGB values for glass tint
-        const darkOverlayOpacity = 0; // Opacity for the dark overlay
-        const darkOverlayColor = [0, 0, 0]; // RGB values for dark overlay color
+        const glassTintColor = [0, 0, 0]; 
+        const darkOverlayOpacity = 0;
+        const darkOverlayColor = [0, 0, 0]; 
 
         const canvas = document.getElementById('backgroundCanvas');
         const ctx = canvas.getContext('2d');

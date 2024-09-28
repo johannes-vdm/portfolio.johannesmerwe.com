@@ -1,5 +1,6 @@
 ---
-title: 'Database'
+title: 'Careman database structure'
+descripion: "ERR Diagram image showcasing the structure of our database"
 ---
 
 

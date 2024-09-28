@@ -1,5 +1,6 @@
 ---
-title: "Watchtower Introduction"
+title: "Screenshot to GPT - Watchtower Introduction"
+description: "Sends GPT a question with the screenshot that you have taken."
 ---
 
 

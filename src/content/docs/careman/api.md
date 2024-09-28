@@ -1,6 +1,6 @@
 ---
-title: "API"
-# description: "Lorem ipsum dolor sit amet - 3"
+title: "Careman Laravel API"
+description: "Laravel route list displaying all functions of routes across the entire application"
 ---
 
 | Domain                                                         | Method | Name                                     | Middleware                                                                |

@@ -1,5 +1,6 @@
 ---
-title: "SMS Provider"
+title: "Careman SMS Provider"
+description: "How the client SMS's are automatically sent."
 ---
 
 <img src="../../../../sms-portal.svg">

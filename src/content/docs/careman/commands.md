@@ -1,6 +1,6 @@
 ---
-title: "Automation"
-
+title: "Careman automation and commands"
+description: "List of commands to automate things for us on our management system."
 ---
 
 

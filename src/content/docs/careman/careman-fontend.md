@@ -1,5 +1,6 @@
 ---
 title: "Careman Front-End"
+description: "Showcases parts of the interface, multiple features such as drag and drop form building, built with React"
 
 ---
 

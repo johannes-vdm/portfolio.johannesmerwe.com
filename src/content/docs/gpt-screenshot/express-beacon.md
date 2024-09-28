@@ -1,5 +1,6 @@
 ---
 title: 'Express Beacon Node Observer'
+description: "Displays all the answers from your screenshot on a remote web server with little delay. Nice little app. This documentation provides an overview of the Node.js code that uses the Express framework, the Socket.IO library, and the Body-Parser middleware to set up a server that can handle post requests to an API endpoint. The server sends real-time updates to connected clients using Socket.IO."
 ---
 <a href="https://github.com/johannes-vdm/express-beacon" target="_blank">View Source Code</a>
 

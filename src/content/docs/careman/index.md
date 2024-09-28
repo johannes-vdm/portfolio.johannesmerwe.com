@@ -1,6 +1,6 @@
 ---
-title: "Careman Management System"
-description: "Complete CRUD using React and Laravel"
+title: "Careman CRUD management system"
+description: "Complete management system using React and Laravel"
 ---
 
 For any additional details, feel free to contact:

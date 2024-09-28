@@ -1,5 +1,6 @@
 ---
-title: "Directory Tree"
+title: "Directory tree"
+description: "Quick directory tree for displaying how the core project fits together. Having your local watchtower and the beacon which displays OpenAI responses" 
 ---
 
 

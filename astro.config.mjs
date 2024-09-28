@@ -12,6 +12,7 @@ export default defineConfig({
       publicDir: 'src/assets',// Static files.
     },
     integrations: [// Enable Preact to support Preact JSX components.
+    preact(), // Enable React for the Algolia search component.
     react(), sitemap(), tailwind()],
     site: `https://johannesmerwe.com`
 });

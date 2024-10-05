@@ -8,9 +8,6 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-    vite: {
-      publicDir: 'src/assets',// Static files.
-    },
     integrations: [// Enable Preact to support Preact JSX components.
     preact(), // Enable React for the Algolia search component.
     react(), sitemap(), tailwind()],
